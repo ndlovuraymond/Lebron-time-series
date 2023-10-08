@@ -14,7 +14,7 @@ app = Dash(__name__)
 server = app.server
 
 years = lebron_stats.Year.unique()
-np.delete(years, 0))
+np.delete(years, 0)
 
 app.layout = html.Div(children=[
     html.H1(children='Lebron Statistics'),
