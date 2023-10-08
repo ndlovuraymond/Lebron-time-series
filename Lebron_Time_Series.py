@@ -26,9 +26,9 @@ app.layout = html.Div(children=[
 
 @callback(
     Output('graph', 'figure'),
-    Output('analysis-of-forecast-MAE', 'children'),
-    Output('analysis-of-forecast-MSE', 'children'),
-    Output('analysis-of-forecast-RMSE', 'children'),
+    # Output('analysis-of-forecast-MAE', 'children'),
+    # Output('analysis-of-forecast-MSE', 'children'),
+    # Output('analysis-of-forecast-RMSE', 'children'),
     Input('dropdown', 'value')
 )
 def update_graph(value):
@@ -54,10 +54,10 @@ def update_graph(value):
         ).update_yaxes(
         gridcolor="black")
     #fig.add_scatter(x=forecast_df.index,y=forecast_df["pts"],mode="lines")
-    MAE = "MAE: "+str(metrics.mean_absolute_error(test_data["pts"],forecast_df["pts"]))
-    MSE = "MSE: "+str(metrics.mean_squared_error(test_data["pts"],forecast_df["pts"]))
-    RMSE = "RMSE: "+str(np.sqrt(metrics.mean_squared_error(test_data["pts"],forecast_df["pts"])))
-    return fig,MAE, MSE, RMSE
+    # MAE = "MAE: "+str(metrics.mean_absolute_error(test_data["pts"],forecast_df["pts"]))
+    # MSE = "MSE: "+str(metrics.mean_squared_error(test_data["pts"],forecast_df["pts"]))
+    # RMSE = "RMSE: "+str(np.sqrt(metrics.mean_squared_error(test_data["pts"],forecast_df["pts"])))
+    return fig #,MAE, MSE, RMSE
 
 
 if __name__ == '__main__':
