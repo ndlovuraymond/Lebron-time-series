@@ -10,6 +10,7 @@ lebron_stats["Year"] = lebron_stats.date.dt.year
 lebron_stats["Month"] = lebron_stats.date.dt.month
 
 app = Dash(__name__)
+server = app.server
 
 app.layout = html.Div(children=[
     html.H1(children='Lebron Statistics'),
