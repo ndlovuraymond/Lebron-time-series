@@ -5,7 +5,7 @@ from statsmodels.tsa.arima.model import ARIMA
 from dash import Dash, dcc, html, callback, Output, Input
 import numpy as np
 
-lebron_stats = pd.read_csv("lebron_career.csv",parse_dates=["date"])
+lebron_stats = pd.read_csv("https://raw.githubusercontent.com/ndlovuraymond/datascience/main/Lebron_Time_Series/lebron_career.csv",parse_dates=["date"])
 lebron_stats["Year"] = lebron_stats.date.dt.year
 lebron_stats["Month"] = lebron_stats.date.dt.month
 
