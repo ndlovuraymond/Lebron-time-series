@@ -53,7 +53,7 @@ def update_graph(value):
         paper_bgcolor="white",plot_bgcolor="white",title={"x":.5,"y":.85,"font":{"size":30}}
         ).update_yaxes(
         gridcolor="black")
-    fig.add_scatter(x=forecast_df.index,y=forecast_df["pts"],mode="lines")
+    #fig.add_scatter(x=forecast_df.index,y=forecast_df["pts"],mode="lines")
     MAE = "MAE: "+str(metrics.mean_absolute_error(test_data["pts"],forecast_df["pts"]))
     MSE = "MSE: "+str(metrics.mean_squared_error(test_data["pts"],forecast_df["pts"]))
     RMSE = "RMSE: "+str(np.sqrt(metrics.mean_squared_error(test_data["pts"],forecast_df["pts"])))
