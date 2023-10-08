@@ -13,9 +13,12 @@ lebron_stats["Month"] = lebron_stats.date.dt.month
 app = Dash(__name__)
 server = app.server
 
+years = lebron_stats.Year.unique()
+np.delete(years, 0))
+
 app.layout = html.Div(children=[
     html.H1(children='Lebron Statistics'),
-    dcc.Dropdown(lebron_stats.Year.unique(),2011,id="dropdown"),
+    dcc.Dropdown(years,2011,id="dropdown"),
     dcc.Graph(
         id="graph")
 ])
